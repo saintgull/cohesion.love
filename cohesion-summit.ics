@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cohesion Summit//NONSGML v1.0//EN
+BEGIN:VEVENT
+UID:cohesion-summit-2025@cohesion.love
+DTSTAMP:20250819T120000Z
+DTSTART:20250905T223000Z
+DTEND:20250906T013000Z
+SUMMARY:Cohesion Summit
+DESCRIPTION:Bringing people together to talk about how to bring people together. A gathering of Toronto's community builders\, organizers\, and superconnectors to coordinate our efforts and create something we can all contribute to equally.\n\nJoin us for an evening of collaboration\, idea-sharing\, and collective action toward building stronger communities.
+LOCATION:TBD\, Toronto
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR

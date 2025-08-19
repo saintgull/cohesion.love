@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cohesion Summit - September 5th</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --green-yellow: #c1ff72ff;
+            --white: #ffffffff;
+            --dim-gray: #636363ff;
+            --davys-gray: #4c4c4cff;
+            --blush: #ea638cff;
+        }
+        
+        @font-face {
+            font-family: 'Meta Accanthis';
+            src: url('MetaAccanthis_regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'Meta Accanthis Alternate';
+            src: url('MetaAccanthisAlternate.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Lexend', sans-serif;
+            font-weight: 400;
+            line-height: 1.6;
+            color: var(--davys-gray);
+            background-image: url('background.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            position: relative;
+            min-height: 100vh;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.4);
+            z-index: -1;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        h1 {
+            font-family: 'Meta Accanthis Alternate', serif;
+            font-size: 4.5em;
+            margin-bottom: 10px;
+            color: #0e7b81;
+        }
+        
+        .countdown {
+            font-size: 1.8em;
+            color: var(--blush);
+            margin: 20px 0;
+            font-weight: 700;
+        }
+        
+        .event-details {
+            font-size: 1.2em;
+            margin: 20px 0;
+            color: var(--dim-gray);
+            font-weight: 700;
+        }
+        
+        .calendar-btn {
+            display: inline-block;
+            background: var(--green-yellow);
+            color: var(--davys-gray);
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 700;
+            transition: all 0.3s;
+            margin: 20px 0;
+            box-shadow: 0 4px 12px rgba(193, 255, 114, 0.3);
+        }
+        
+        .calendar-btn:hover {
+            background: var(--blush);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(234, 99, 140, 0.3);
+        }
+        
+        .intro {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        h2 {
+            color: var(--davys-gray);
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            font-weight: 700;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            color: var(--dim-gray);
+            font-size: 1.1em;
+            text-align: justify;
+        }
+        
+        .goals {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        ul {
+            list-style-position: inside;
+            margin-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+            color: var(--dim-gray);
+            font-size: 1.1em;
+            text-align: justify;
+        }
+        
+        .cta {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .cta p {
+            text-align: center;
+        }
+        
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+            .countdown {
+                font-size: 1.4em;
+            }
+            .intro, .goals, .cta {
+                padding: 25px;
+            }
+            #newsletter-form {
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+            }
+            #newsletter-form input {
+                margin-right: 0;
+                margin-bottom: 10px;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cohesion Summit</h1>
+            <div class="countdown" id="countdown"></div>
+            <div class="event-details">
+                September 5th, 2025 • 6:30 PM<br>
+                TBD, Toronto
+            </div>
+            <a href="cohesion-summit.ics" class="calendar-btn" download>Add to Calendar</a>
+        </header>
+
+        <section class="intro">
+            <h2>What is Cohesion Technology?</h2>
+            <p>
+                Cohesion technology is about finding the best ways to bring people together; whether through human networks, 
+                digital tools, or new platforms. In a world full of events, groups, and initiatives working toward similar 
+                goals, we often operate in silos. Fortunately, when we come together, we are able to accomplish so much more.
+            </p>
+            <p>
+                We're exploring how to connect these dots; bringing together the people who bring people together to share 
+                resources and knowledge.
+            </p>
+        </section>
+
+        <section class="goals">
+            <h2>What We Want</h2>
+            <p>At the Cohesion Summit, we're gathering to:</p>
+            <ul>
+                <li>Connect Toronto's community builders and organizers</li>
+                <li>Share what's working and learn from each other</li>
+                <li>Create a network of "superconnectors"; people who excel at bringing others together</li>
+                <li>Design tools and practices that make community building easier</li>
+                <li>Build things together that we can all contribute to equally</li>
+            </ul>
+            <p>
+                Through shared envisioning and tapping into our collective consciousness, we will be able to coalesce 
+                goals and cooperate on them for a more connected and loving world.
+            </p>
+        </section>
+
+        <section class="goals">
+            <h2>Why Bring People Together?</h2>
+            <p>
+                We're facing a predicament; not just isolated problems but intersecting crises that require collective 
+                action. When we create robust interdisciplinary social networks, we foster a sense of safety and community.
+            </p>
+            <p>
+                This safety enables cooperation on goals for the greater good. When people feel held by their basin 
+                of community, they're more willing to send out beacons to others, creating ripple effects of connection 
+                and collaboration.
+            </p>
+        </section>
+
+        <section class="goals">
+            <h2>Our Approach</h2>
+            <p>
+                Whether through apps, platforms, or human systems, we're open to all solutions that create beacons 
+                drawing people into basins of community.
+            </p>
+            <p>
+                <strong>Aggregating the aggregators:</strong> We're superconnecting the superconnectors; gathering those 
+                who naturally bring others together to share knowledge and coordinate efforts. By creating unfakeable 
+                signals of trust, we can spark ripple effects throughout Toronto's communities.
+            </p>
+            <p>
+                <strong>Human as the technology:</strong> People serving as the recommendation engine, building a culture 
+                of aggregation where communities actively share what's happening. But we're also exploring digital tools 
+                that could amplify these human connections.
+            </p>
+            <p>
+                Together, we'll design systems that make care visible and create non-event based connections; building 
+                relationships in daily life, not just at formal gatherings.
+            </p>
+        </section>
+
+        <section class="cta">
+            <h2>Join Us</h2>
+            <p>
+                If you're someone who brings people together; whether through events, communities, or just being 
+                a good neighbor; we want you there. Let's coordinate our efforts and amplify our impact.
+            </p>
+            <p style="font-weight: 700; color: var(--davys-gray);">
+                Together, we can build the connections that build community.
+            </p>
+            <form action="https://formspree.io/f/xovloddr" 
+                  method="POST"
+                  id="newsletter-form" 
+                  style="margin-top: 30px;">
+                <input type="email" 
+                       name="email" 
+                       placeholder="Enter your email" 
+                       required 
+                       style="padding: 12px 16px; 
+                              font-size: 16px; 
+                              border: 2px solid var(--green-yellow); 
+                              border-radius: 8px; 
+                              width: 100%; 
+                              max-width: 300px; 
+                              margin-right: 10px;
+                              box-sizing: border-box;
+                              background: var(--white);
+                              color: var(--davys-gray);">
+                <input type="hidden" name="_subject" value="New cohesion summit subscriber!">
+                <button type="submit" 
+                        style="padding: 12px 24px; 
+                               font-size: 16px; 
+                               background: var(--blush); 
+                               color: var(--white); 
+                               border: none; 
+                               border-radius: 8px; 
+                               cursor: pointer; 
+                               font-weight: 700;
+                               transition: all 0.3s;
+                               box-shadow: 0 4px 12px rgba(234, 99, 140, 0.3);">
+                    Subscribe
+                </button>
+            </form>
+            <p id="form-message" style="margin-top: 15px; color: var(--green-yellow); font-weight: 700; display: none;"></p>
+        </section>
+    </div>
+
+    <script>
+        // Countdown timer
+        function updateCountdown() {
+            const summit = new Date('September 5, 2025 18:30:00').getTime();
+            const now = new Date().getTime();
+            const distance = summit - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+            document.getElementById('countdown').innerHTML = 
+                days + ' days, ' + hours + ' hours, ' + minutes + ' minutes';
+
+            if (distance < 0) {
+                document.getElementById('countdown').innerHTML = 'The summit has begun!';
+            }
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 60000); // Update every minute
+
+        // Check if user was redirected after subscribing
+        if (window.location.hash === '#subscribed') {
+            const messageEl = document.getElementById('form-message');
+            messageEl.textContent = 'Thank you for subscribing! We\'ll keep you updated.';
+            messageEl.style.display = 'block';
+            
+            // Clean up the URL
+            history.replaceState(null, null, ' ');
+        }
+    </script>
+</body>
+</html>
