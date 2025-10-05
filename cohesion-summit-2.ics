@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cohesion Summit//NONSGML v1.0//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Cohesion Summit #2
+X-WR-TIMEZONE:America/Toronto
+BEGIN:VEVENT
+DTSTART:20251009T220000Z
+DTEND:20251010T020000Z
+DTSTAMP:20241005T120000Z
+UID:cohesion-summit-2-2025@cohesion.love
+SUMMARY:Cohesion Summit #2
+DESCRIPTION:Come with an idea\, dream\, or project\, leave with energy and collaborators!\n\nJoin us for the second installment of the Cohesion Summit series. Our mission is to bring people together\, in-person\, to work together\, breaking down the fake silos.\n\nEvent includes:\n- Park meetup with free tea (6pm)\n- Rotating quick pitches\n- Team formation\n- Collaborative project creation\n- Networking and fun!\n\nTickets: $17 (reach out if you need assistance)\nCapacity: 150 people\n\nRegister at: https://www.eventbrite.ca/e/cohesion-summit-2-tickets-1772973524539
+LOCATION:Cecil Community Centre\, 58 Cecil St\, Toronto\, ON\, Canada
+URL:https://cohesion.love
+STATUS:CONFIRMED
+ORGANIZER;CN=Cohesion Summit:mailto:hello@cohesion.love
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Cohesion Summit #2 is tomorrow!
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Cohesion Summit #2 starts in 1 hour!
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

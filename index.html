@@ -3,35 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cohesion Summit #1</title>
+    <title>Cohesion Summit #2</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💙</text></svg>">
-    <meta name="description" content="Join Toronto's community builders at Cohesion Summit #1. Find overlap in dreams and projects for bringing people together through digital and in-person technologies. September 5, 2025, 6-9 PM at CSI Spadina.">
-    <meta property="og:title" content="Cohesion Summit #1">
-    <meta property="og:description" content="Bringing people together to talk about how to bring people together. September 5, 2025 in Toronto.">
+    <meta name="description" content="Join Toronto's community builders at Cohesion Summit #2. Come with an idea, dream, or project, leave with energy and collaborators! October 9, 2025, 6-10 PM at Cecil Community Centre.">
+    <meta property="og:title" content="Cohesion Summit #2">
+    <meta property="og:description" content="Bringing people together to talk about how to bring people together. October 9, 2025 in Toronto.">
     <meta property="og:image" content="https://cohesion.love/background.png">
     <meta property="og:url" content="https://cohesion.love">
     <meta name="twitter:card" content="summary_large_image">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --green-yellow: #c1ff72ff;
-            --white: #ffffffff;
-            --dim-gray: #636363ff;
-            --davys-gray: #4c4c4cff;
-            --blush: #ea638cff;
-        }
-        
-        @font-face {
-            font-family: 'Meta Accanthis';
-            src: url('./MetaAccanthis_regular.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
-            font-display: swap;
-        }
-        
         @font-face {
             font-family: 'Meta Accanthis Alternate';
             src: url('./MetaAccanthisAlternate.ttf') format('truetype');
@@ -47,328 +27,345 @@
         }
         
         body {
-            font-family: 'Lexend', sans-serif;
-            font-weight: 400;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
-            color: var(--davys-gray);
-            background-image: url('./background.png');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            position: relative;
-            min-height: 100vh;
-        }
-        
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(255, 255, 255, 0.4);
-            z-index: -1;
+            color: #333;
+            background: #fff;
         }
         
         .container {
-            max-width: 800px;
+            max-width: 720px;
             margin: 0 auto;
             padding: 20px;
         }
         
+        nav {
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #666;
+            margin: 0 15px;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover, nav a.active {
+            color: #000;
+        }
+        
         header {
             text-align: center;
-            padding: 40px 0;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 12px;
-            margin-bottom: 40px;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-            backdrop-filter: blur(10px);
+            margin: 80px 0 60px;
         }
         
         h1 {
             font-family: 'Meta Accanthis Alternate', Georgia, serif;
-            font-size: 4.5em;
-            margin-bottom: 10px;
+            font-size: 3.5em;
+            margin-bottom: 30px;
             color: #0e7b81;
+            font-weight: normal;
+        }
+        
+        .event-info {
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 16px;
         }
         
         .countdown {
-            font-size: 1.8em;
-            color: var(--blush);
+            font-size: 24px;
+            color: #ea638c;
             margin: 20px 0;
-            font-weight: 700;
+            font-weight: 300;
         }
         
-        .event-details {
-            font-size: 1.2em;
-            margin: 20px 0;
-            color: var(--dim-gray);
-            font-weight: 700;
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 0;
+            flex-wrap: wrap;
         }
         
-        .calendar-btn {
-            display: inline-block;
-            background: var(--green-yellow);
-            color: var(--davys-gray);
-            padding: 12px 30px;
+        .btn {
+            padding: 12px 28px;
             text-decoration: none;
-            border-radius: 30px;
-            font-weight: 700;
+            border-radius: 25px;
+            font-size: 14px;
             transition: all 0.3s;
-            margin: 20px 0;
-            box-shadow: 0 4px 12px rgba(193, 255, 114, 0.3);
+            display: inline-block;
+            border: 1px solid transparent;
         }
         
-        .calendar-btn:hover {
-            background: var(--blush);
-            color: var(--white);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(234, 99, 140, 0.3);
+        .btn-primary {
+            background: #ea638c;
+            color: white;
+            border-color: #ea638c;
         }
         
-        #eventbrite-widget-modal-trigger-1633151332599:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(234, 99, 140, 0.4);
+        .btn-primary:hover {
+            background: transparent;
+            color: #ea638c;
         }
         
-        .intro {
-            background: rgba(255, 255, 255, 0.8);
-            padding: 40px;
-            border-radius: 12px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-            backdrop-filter: blur(10px);
+        .btn-secondary {
+            background: transparent;
+            color: #333;
+            border-color: #333;
+        }
+        
+        .btn-secondary:hover {
+            background: #333;
+            color: white;
+        }
+        
+        .content {
+            max-width: 600px;
+            margin: 60px auto;
         }
         
         h2 {
-            color: var(--davys-gray);
-            margin-bottom: 20px;
-            font-size: 1.8em;
+            font-family: 'Helvetica Neue', 'Arial Rounded MT Bold', 'Arial Nova', 'Segoe UI', sans-serif;
+            font-size: 20px;
+            margin: 40px 0 20px;
             font-weight: 700;
         }
         
         p {
-            margin-bottom: 15px;
-            color: var(--dim-gray);
-            font-size: 1.1em;
+            margin-bottom: 20px;
+            color: #555;
+            line-height: 1.8;
             text-align: justify;
         }
         
-        .goals {
-            background: rgba(255, 255, 255, 0.8);
-            padding: 40px;
-            border-radius: 12px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-            backdrop-filter: blur(10px);
+        .highlight {
+            color: #ea638c;
+            font-style: italic;
         }
         
-        ul {
-            list-style-position: inside;
-            margin-left: 20px;
+        .itinerary {
+            margin: 30px 0;
         }
         
-        li {
+        .itinerary p {
             margin-bottom: 10px;
-            color: var(--dim-gray);
-            font-size: 1.1em;
-            text-align: justify;
+            padding-left: 20px;
         }
         
-        .cta {
+        .footer-info {
             text-align: center;
-            background: rgba(255, 255, 255, 0.8);
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-            backdrop-filter: blur(10px);
+            margin: 60px 0;
+            padding: 30px;
+            background: #f9f9f9;
+            border-radius: 10px;
         }
         
-        .cta p {
+        form {
+            margin-top: 30px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        input[type="email"] {
+            padding: 10px 20px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            font-size: 14px;
+            width: 250px;
+            outline: none;
+        }
+        
+        input[type="email"]:focus {
+            border-color: #ea638c;
+        }
+        
+        button {
+            padding: 10px 25px;
+            background: #333;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+        
+        button:hover {
+            background: #555;
+        }
+        
+        button.btn {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        /* Shared footer styles */
+        .newsletter-footer {
             text-align: center;
+            margin: 50px auto 40px;
+            padding: 40px 20px;
+            max-width: 720px;
+        }
+        
+        .newsletter-footer p {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 25px;
+            text-align: center !important;
+        }
+        
+        .newsletter-footer form {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 0;
+        }
+        
+        .newsletter-footer input[type="email"] {
+            padding: 10px 20px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            font-size: 14px;
+            width: 250px;
+            outline: none;
+        }
+        
+        .newsletter-footer input[type="email"]:focus {
+            border-color: #ea638c;
+        }
+        
+        .newsletter-footer button {
+            padding: 10px 25px;
+            background: #333;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+        
+        .newsletter-footer button:hover {
+            background: #555;
         }
         
         @media (max-width: 600px) {
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+            
             h1 {
-                font-size: 2em;
+                font-size: 2.5em;
             }
-            .countdown {
-                font-size: 1.4em;
-            }
-            .intro, .goals, .cta {
-                padding: 25px;
-            }
-            #newsletter-form {
-                display: flex;
+            
+            .action-buttons {
                 flex-direction: column;
-                align-items: stretch;
+                align-items: center;
             }
-            #newsletter-form input {
-                margin-right: 0;
-                margin-bottom: 10px;
-                max-width: 100%;
+            
+            form {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            input[type="email"] {
+                width: 100%;
+                max-width: 300px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="previous-summit.html">Archive</a>
+            <a href="our-vision.html">Vision</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        
         <header>
-            <h1>Cohesion Summit</h1>
+            <h1>Cohesion Summit #2</h1>
             <div class="countdown" id="countdown"></div>
-            <div class="event-details">
-                September 5th, 2025 • 6:00-9:00 PM<br>
-                CSI Spadina, Ground Floor<br>
-                192 Spadina Ave, Toronto
+            <div class="event-info">
+                Thursday, October 9th, 2025 · 6-10 PM<br>
+                Cecil Community Centre · Toronto
             </div>
-            <!-- Eventbrite Ticketing -->
-            <noscript><a href="https://www.eventbrite.ca/e/cohesion-summit-1-tickets-1633151332599" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a></noscript>
-            <button id="eventbrite-widget-modal-trigger-1633151332599" 
-                    type="button"
-                    style="display: inline-block;
-                           background: var(--blush);
-                           color: var(--white);
-                           padding: 12px 30px;
-                           text-decoration: none;
-                           border-radius: 30px;
-                           font-weight: 700;
-                           transition: all 0.3s;
-                           margin: 20px 10px;
-                           box-shadow: 0 4px 12px rgba(234, 99, 140, 0.3);
-                           border: none;
-                           cursor: pointer;
-                           font-size: 1em;
-                           font-family: 'Lexend', sans-serif;">
-                Get Tickets
-            </button>
             
-            <a href="cohesion-summit.ics" class="calendar-btn" download>Add to Calendar</a>
-            
-            <p style="font-style: italic; 
-                      font-size: 0.9em; 
-                      color: var(--dim-gray); 
-                      margin-top: 15px;
-                      text-align: center;">
-                (this is a ticketed event! get your tickets up here! 225 people capacity!)
-            </p>
+            <div class="action-buttons">
+                <!-- Noscript content for added SEO -->
+                <noscript><a href="https://www.eventbrite.com/e/cohesion-summit-2-tickets-1772973524539" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a></noscript>
+                <!-- You can customize this button any way you like -->
+                <button id="eventbrite-widget-modal-trigger-1772973524539" type="button" class="btn btn-primary">Buy Tickets</button>
+                <a href="cohesion-summit-2.ics" class="btn btn-secondary" download>Add to Calendar</a>
+            </div>
         </header>
-
-        <section class="intro">
+        
+        <div class="content">
+            <p class="highlight">Come with an idea, dream, or project, leave with energy and collaborators!</p>
+            
             <p>
-                Join us for an evening designed to connect Toronto's community builders, organizers, and dreamers who 
-                are working to bring people together.
+                Welcome to the second installment of the Cohesion Summit series. When people work separately to tackle the same problem, unaware of each other, they often do the same things with less resources and miss out on collaboration. Our mission is to bring people together, in-person, to work together, breaking down the fake silos.
             </p>
-        </section>
-
-        <section class="goals">
-            <h2>THE PHILOSOPHY</h2>
+            
             <p>
-                We believe that when mission-aligned people work together, they can achieve more than when working 
-                separately. This summit is about finding that alignment and turning individual dreams into collective action.
+                You will be in a room with a range of people across sectors and life experiences, and through creativity, will-power, and FUN, find something to unite each other and form a cohesive team!
             </p>
-            <p>
-                Whether you're building a digital platform, organizing neighborhood events, creating community spaces, 
-                or dreaming up new ways to foster human connection, this summit is your chance to find mission-aligned 
-                collaborators.
-            </p>
-        </section>
-
-        <section class="goals">
-            <h2>THE FORMAT</h2>
-            <p>
-                <strong>6:00 PM - Speed-Meeting Icebreakers</strong><br>
-                Get sorted into small groups where everyone has one minute to share their idea, dream, project, or values. 
-                Rotate through multiple groups to practice your pitch and hear diverse perspectives.
-            </p>
-            <p>
-                <strong>6:45 PM - Team Formation</strong><br>
-                Write your idea on a sign and find others with complementary visions. Form teams of 4-10 people around 
-                shared interests and goals.
-            </p>
-            <p>
-                <strong>7:15 PM - Pitches & Connection</strong><br>
-                Teams pitch their collaborative visions to the whole room. After pitches, freely connect with people 
-                whose ideas excite you most.
-            </p>
-            <p>
-                <strong>8:45 PM - Ending and we go to the bar :)</strong>
-            </p>
-        </section>
-
-        <section class="goals">
-            <h2>WHAT TO BRING</h2>
-            <ul>
-                <li>Your idea (no matter how rough!)</li>
-                <li>Openness to collaboration</li>
-                <li>Contact info to share</li>
+            
+            <h2>What this event isn't:</h2>
+            <ul style="list-style-type: disc; padding-left: 20px; margin-bottom: 20px;">
+                <li style="color: #555; margin-bottom: 8px;">A hackathon</li>
+                <li style="color: #555; margin-bottom: 8px;">A corporate networking event</li>
             </ul>
-        </section>
-
-        <section class="goals">
-            <h2>WHO SHOULD COME</h2>
-            <ul>
-                <li>Community organizers and event creators</li>
-                <li>Tech builders focused on human connection</li>
-                <li>Neighborhood activists and local leaders</li>
-                <li>Those seeking collaborators for community projects</li>
-                <li>Anyone with ideas for bringing people together</li>
+            
+            <h2>What this event will have you do:</h2>
+            <ul style="list-style-type: disc; padding-left: 20px; margin-bottom: 20px;">
+                <li style="color: #555; margin-bottom: 8px;">Find the intersection between your self/project and other people around you</li>
+                <li style="color: #555; margin-bottom: 8px;">Connect with people who have interesting new ideas</li>
+                <li style="color: #555; margin-bottom: 8px;">HAVE FUN!</li>
             </ul>
-        </section>
-
-
-        <section class="cta">
-            <h2>Join Us</h2>
-            <p style="font-weight: 700; color: var(--davys-gray);">
-                Come with your idea. Leave with a team.
-            </p>
-            <p>
-                VENUE: CSI Spadina, Ground Floor<br>
-                CAPACITY: Limited to 225 people<br>
-                TICKETS: Required for entry
-            </p>
-            <form action="https://formspree.io/f/xovloddr" 
-                  method="POST"
-                  id="newsletter-form" 
-                  style="margin-top: 30px;">
-                <input type="email" 
-                       name="email" 
-                       placeholder="Enter your email" 
-                       required 
-                       style="padding: 12px 16px; 
-                              font-size: 16px; 
-                              border: 2px solid var(--green-yellow); 
-                              border-radius: 8px; 
-                              width: 100%; 
-                              max-width: 300px; 
-                              margin-right: 10px;
-                              box-sizing: border-box;
-                              background: var(--white);
-                              color: var(--davys-gray);">
-                <input type="hidden" name="_subject" value="New cohesion summit subscriber!">
-                <button type="submit" 
-                        style="padding: 12px 24px; 
-                               font-size: 16px; 
-                               background: var(--blush); 
-                               color: var(--white); 
-                               border: none; 
-                               border-radius: 8px; 
-                               cursor: pointer; 
-                               font-weight: 700;
-                               transition: all 0.3s;
-                               box-shadow: 0 4px 12px rgba(234, 99, 140, 0.3);">
-                    Subscribe
-                </button>
-            </form>
-            <p id="form-message" style="margin-top: 15px; color: var(--green-yellow); font-weight: 700; display: none;"></p>
-        </section>
+            
+            <h2>Itinerary</h2>
+            <div class="itinerary">
+                <p><strong>6:00 PM</strong> - Park meet up with free tea</p>
+                <p><strong>7:00 PM</strong> - Flow into Cecil Community Centre</p>
+                <p><strong>7:15 PM</strong> - Welcoming speech</p>
+                <p><strong>7:20 PM</strong> - Rotating quick pitches</p>
+                <p><strong>8:00 PM</strong> - Snack break</p>
+                <p><strong>8:15 PM</strong> - Thing sharing</p>
+                <p><strong>8:21 PM</strong> - Team formation</p>
+                <p><strong>8:32 PM</strong> - Collaborative project creation</p>
+                <p><strong>8:55 PM</strong> - Present your cohesive project</p>
+                <p><strong>9:30 PM</strong> - Mingling and networking</p>
+                <p><strong>10:00 PM</strong> - Walk to a bar? :)</p>
+            </div>
+        </div>
+        
+        
+        <p style="text-align: center; font-size: 20px; color: #ea638c; margin: 40px 0; font-weight: 500;">
+            We're excited to see you soon! ♥
+        </p>
+    </div>
+    
+    <!-- Shared Newsletter Footer -->
+    <div class="newsletter-footer">
+        <p>Stay in the loop for future summits and spontaneous collaborations!</p>
+        <form action="https://formspree.io/f/xovloddr" method="POST">
+            <input type="email" name="email" placeholder="Your email" required>
+            <input type="hidden" name="_subject" value="New cohesion summit subscriber!">
+            <button type="submit">Join Us</button>
+        </form>
     </div>
 
     <script>
-        // Countdown timer
         function updateCountdown() {
-            const summit = new Date('September 5, 2025 18:00:00').getTime();
+            const summit = new Date('October 9, 2025 18:00:00').getTime();
             const now = new Date().getTime();
             const distance = summit - now;
 
@@ -385,20 +382,9 @@
         }
 
         updateCountdown();
-        setInterval(updateCountdown, 60000); // Update every minute
-
-        // Check if user was redirected after subscribing
-        if (window.location.hash === '#subscribed') {
-            const messageEl = document.getElementById('form-message');
-            messageEl.textContent = 'Thank you for subscribing! We\'ll keep you updated.';
-            messageEl.style.display = 'block';
-            
-            // Clean up the URL
-            history.replaceState(null, null, ' ');
-        }
+        setInterval(updateCountdown, 60000);
     </script>
-
-    <!-- Eventbrite Widget Scripts -->
+    
     <script src="https://www.eventbrite.ca/static/widgets/eb_widgets.js"></script>
     <script type="text/javascript">
         var exampleCallback = function() {
@@ -407,9 +393,9 @@
 
         window.EBWidgets.createWidget({
             widgetType: 'checkout',
-            eventId: '1633151332599',
+            eventId: '1772973524539',
             modal: true,
-            modalTriggerElementId: 'eventbrite-widget-modal-trigger-1633151332599',
+            modalTriggerElementId: 'eventbrite-widget-modal-trigger-1772973524539',
             onOrderComplete: exampleCallback
         });
     </script>
