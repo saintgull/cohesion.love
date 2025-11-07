@@ -299,7 +299,14 @@
             </div>
             
             <div class="action-buttons">
-                <button type="button" class="btn btn-primary" disabled style="opacity: 0.7; cursor: not-allowed;">Tickets Coming Soon</button>
+                <a
+                  href="https://lu.ma/event/evt-iSzXNCYlkpmG845"
+                  class="btn btn-primary"
+                  data-luma-action="checkout"
+                  data-luma-event-id="evt-iSzXNCYlkpmG845"
+                >
+                  Buy Tickets
+                </a>
                 <a href="cohesion-summit-3.ics" class="btn btn-secondary" download>Add to Calendar</a>
             </div>
         </header>
@@ -398,5 +405,6 @@
         setInterval(updateCountdown, 60000);
     </script>
     
+    <script id="luma-checkout" src="https://embed.lu.ma/checkout-button.js"></script>
 </body>
 </html>
