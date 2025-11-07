@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cohesion Summit//NONSGML v1.0//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:cohesion-summit-3@cohesion.love
+DTSTAMP:20251107T120000Z
+DTSTART:20251128T230000Z
+DTEND:20251129T020000Z
+SUMMARY:Cohesion Summit #3
+DESCRIPTION:Come with your thing, form teams, launch projects together!\n\nJoin Toronto's community builders for an evening of collaboration and connection.\n\nTickets: $22 (reach out if you need assistance)\nCapacity: 60 people\n\nMore info at https://cohesion.love
+LOCATION:The Wicket (Top Floor), 1671 Bloor St W, Toronto, ON M6P 1A6
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
+END:VCALENDAR
